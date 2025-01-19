@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head content as blog.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Blog Title] - Shubham Digital Studio</title>
+    <meta name="description" content="[Blog Description]">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/logo/lg.webp" type="image/webp">
+</head>
+<body class="blog-post-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo/logo.webp" alt="Shubham Digital Studio Logo">
+            </a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../index.html#about">About</a>
+            <a href="../../index.html#services">Services</a>
+            <!-- removed portfolio link -->
+            <a href="../../index.html#pre-wedding-video">Highlights</a>
+            <a href="../index.html">Blog</a>
+            <a href="../../index.html#contact" class="cta-button">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <div class="back-to-blog">
+        <div class="container">
+            <a href="javascript:void(0)" onclick="goBack()" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+        </div>
+    </div>
+
+    <!-- Single Blog Post Content -->
+    <article class="single-blog-post">
+        <div class="container">
+            <div class="post-header">
+                <div class="post-category">[Category]</div>
+                <h1>[Blog Title]</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> [Date]</span>
+                    <span><i class="far fa-clock"></i> [Read Time]</span>
+                    <span><i class="far fa-user"></i> [Author]</span>
+                </div>
+            </div>
+
+            <div class="post-featured-image">
+                <img src="[Featured Image Path]" alt="[Image Alt Text]">
+            </div>
+
+            <div class="post-content">
+                <!-- Add your blog content here -->
+                [Blog Content]
+            </div>
+
+            <!-- Share Buttons -->
+            <div class="post-share">
+                <h3>Share this article</h3>
+                <div class="share-buttons">
+                    <a href="#" onclick="shareOnFacebook()" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" onclick="shareOnTwitter()" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="shareOnLinkedIn()" class="share-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" onclick="shareOnWhatsApp()" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Recent Blog Posts -->
+    <section class="recent-posts">
+        <div class="container">
+            <h2>Recent Posts</h2>
+            <div class="recent-posts-grid" id="recentPosts">
+                <!-- Recent posts will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="../../index.html">
+                    <img src="../../assets/logo/logo.webp" alt="Shubham Digital Studio Logo" class="footer-logo">
+                </a>
+                <p>Capturing moments that last forever</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/shubham.digital.studio_207041/" target="_blank" class="insta-follow-btn">
+                        <i class="fab fa-instagram"></i> Follow Us
+                    </a>
+                    <a href="https://www.youtube.com/@ShubhamDigitalMarehra" target="_blank" class="youtube-follow-btn">
+                        <i class="fab fa-youtube"></i> Subscribe Now
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#services">Services</a></li>
+                    <li><a href="../../gallery.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../../gallery.html#wedding-btn">Wedding Photography</a></li>
+                    <li><a href="../../index.html#pre-wedding-video">Event Videography</a></li>
+                    <li><a href="../../gallery.html#all-btn">Portrait Sessions</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to our newsletter for updates and photography tips.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2024 Shubham Digital Studio. All rights reserved.</p>
+            </div>
+            <div class="developer-credits">
+                <p><a href="https://instagram.com/its.mrgagan" target="_blank">Made with <i class="fas fa-heart glowing-heart"></i> by Gagan</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script type="module" src="../../js/recentPosts.js"></script>
+    <script>
+        // Add this new function
+        function goBack() {
+            window.history.back();
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if(navToggle && navLinks) {
+                navToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // Social Media Sharing Functions
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${title}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            window.open(`https://api.whatsapp.com/send?text=${title}%20${url}`, '_blank');
+        }
+    </script>
+</body>
+</html>
