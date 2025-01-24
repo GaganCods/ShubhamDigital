@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home Page -->
+    <url>
+        <loc>https://shubhamdigital.vercel.app/</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Main Pages -->
+    <url>
+        <loc>https://shubhamdigital.vercel.app/gallery.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Main -->
+    <url>
+        <loc>https://shubhamdigital.vercel.app/blog/blog.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Posts -->
+    <url>
+        <loc>https://shubhamdigital.vercel.app/blog/posts/about-shubham-digital-studio.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://shubhamdigital.vercel.app/blog/posts/photography-trends-2025.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://shubhamdigital.vercel.app/blog/posts/wedding-photography-tips.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://shubhamdigital.vercel.app/blog/posts/why-hire-professional-photographers.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Portfolio Items -->
+    <url>
+        <loc>https://shubhamdigital.vercel.app/weddings/rahul-priya.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Error Page -->
+    <url>
+        <loc>https://shubhamdigital.vercel.app/404.html</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+</urlset>
