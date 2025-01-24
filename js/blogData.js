@@ -17,7 +17,7 @@ const blogPosts = [
         date: "March 10, 2024",
         readTime: "4 min read",
         author: "Shubham",
-        image: "../../assets/Gallery/pre-wedding/5.webp",
+        image: "../../assets/gallery/pre-wedding/5.webp",
         url: "./photography-trends-2025.html",
         excerpt: "new trends that are shaping this year's photography styles, along with professional insights..."
     },
@@ -28,7 +28,7 @@ const blogPosts = [
         date: "March 5, 2024",
         readTime: "6 min read",
         author: "Shubham",
-        image: "../../assets/Gallery/pre-wedding/12.webp",
+        image: "../../assets/gallery/pre-wedding/12.webp",
         url: "./why-hire-professional-photographers.html",
         excerpt: "Provide fantastic, high-quality photos for events by hiring professional photographers and using quality equipment..."
     }
