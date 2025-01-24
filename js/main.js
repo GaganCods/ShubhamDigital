@@ -277,3 +277,111 @@ document.addEventListener('DOMContentLoaded', () => {
     // initializeVideoPlayer();
     // initializeContactForm();
 });
+
+// Gallery Popup Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const popup = document.querySelector('.gallery-popup');
+    const popupImage = document.getElementById('popupImage');
+    const closeBtn = document.querySelector('.popup-close');
+    const prevBtn = document.querySelector('.popup-nav.prev');
+    const nextBtn = document.querySelector('.popup-nav.next');
+    let currentImageIndex = 0;
+    let currentImages = [];
+
+    // Function to open popup
+    function openPopup(image, images) {
+        popupImage.src = image.src;
+        popupImage.alt = image.alt;
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        currentImages = images;
+        currentImageIndex = currentImages.indexOf(image);
+        
+        // Show/hide navigation based on number of images
+        if (currentImages.length <= 1) {
+            popup.classList.add('single-image');
+        } else {
+            popup.classList.remove('single-image');
+        }
+    }
+
+    // Function to close popup
+    function closePopup() {
+        popup.classList.remove('active');
+        popup.classList.remove('single-image');
+        document.body.style.overflow = ''; // Restore scrolling
+        popupImage.src = '';
+        popupImage.alt = '';
+    }
+
+    // Function to navigate to next/previous image
+    function navigateImage(direction) {
+        if (currentImages.length <= 1) return;
+        
+        currentImageIndex = (currentImageIndex + direction + currentImages.length) % currentImages.length;
+        const newImage = currentImages[currentImageIndex];
+        
+        // Add fade effect
+        popupImage.style.opacity = '0';
+        setTimeout(() => {
+            popupImage.src = newImage.src;
+            popupImage.alt = newImage.alt;
+            popupImage.style.opacity = '1';
+        }, 200);
+    }
+
+    // Add click event to gallery items
+    galleryItems.forEach(item => {
+        const img = item.querySelector('img');
+        img.addEventListener('click', () => {
+            const visibleImages = Array.from(document.querySelectorAll('.gallery-item:not(.hidden) img'));
+            openPopup(img, visibleImages);
+        });
+    });
+
+    // Close popup when clicking outside the image
+    popup.addEventListener('click', (e) => {
+        // Close only if clicking the dark overlay (not the image or navigation buttons)
+        if (e.target === popup || e.target.classList.contains('gallery-popup')) {
+            closePopup();
+        }
+    });
+
+    // Prevent popup from closing when clicking the content area
+    document.querySelector('.popup-content').addEventListener('click', (e) => {
+        // Stop event from reaching the popup overlay
+        e.stopPropagation();
+    });
+
+    // Navigation buttons should not trigger popup close
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navigateImage(-1);
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navigateImage(1);
+    });
+
+    // Close button click event
+    closeBtn.addEventListener('click', closePopup);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!popup.classList.contains('active')) return;
+        
+        switch(e.key) {
+            case 'Escape':
+                closePopup();
+                break;
+            case 'ArrowLeft':
+                navigateImage(-1);
+                break;
+            case 'ArrowRight':
+                navigateImage(1);
+                break;
+        }
+    });
+});
