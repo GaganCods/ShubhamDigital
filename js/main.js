@@ -85,7 +85,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         `I want to reach out you for more details! 😊`;
 
     // WhatsApp URL (Ensure phone number is in international format)
-    const phoneNumber = '9536388420'; // Your WhatsApp number
+    const phoneNumber = '919761815984'; // Your WhatsApp number
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
     // Open WhatsApp

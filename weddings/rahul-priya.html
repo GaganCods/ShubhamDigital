@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul & Priya Wedding Gallery - Studio Name</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .wedding-header {
+            height: 60vh;
+            background: linear-gradient(var(--gradient-2)),
+                        url('../assets/gallery/wedding/rahul-priya/1.webp') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-top: -80px;
+            padding-top: 80px;
+        }
+
+        .wedding-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+        }
+
+        .wedding-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+        }
+
+        .wedding-header p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .wedding-gallery {
+            background: var(--background-color);
+            position: relative;
+            overflow: hidden;
+            padding: 50px 0;
+        }
+
+        .wedding-gallery::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--image-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 3/4;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--smooth-shadow-hover);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .wedding-header h1 {
+                font-size: 2.5rem;
+            }
+            .wedding-header p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html" class="logo-container">
+                <img src="../assets/logo/logo.webp" alt="Shubham Digital Studio Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../gallery.html">Gallery</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Wedding Gallery Header -->
+    <header class="wedding-header">
+        <div class="container">
+            <h1>Rahul & Priya's Wedding</h1>
+            <p>A beautiful celebration of love and tradition</p>
+        </div>
+    </header>
+
+    <!-- Wedding Gallery Grid -->
+    <section class="wedding-gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/1.webp" alt="Wedding moment - Elegant couple shot" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/2.webp" alt="Wedding moment - Traditional ceremony" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/3.webp" alt="Wedding moment - Candid celebration" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/4.webp" alt="Wedding moment - Family gathering" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/5.webp" alt="Wedding moment - Bride preparation" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/6.webp" alt="Wedding moment - Groom preparation" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/7.webp" alt="Wedding moment - Ceremony rituals" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/8.webp" alt="Wedding moment - Reception celebration" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/9.webp" alt="Wedding moment - Dance celebration" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/10.webp" alt="Wedding moment - Couple portrait" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/11.webp" alt="Wedding moment - Traditional rituals" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/12.webp" alt="Wedding moment - Family portrait" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/13.webp" alt="Wedding moment - Candid moments" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/14.webp" alt="Wedding moment - Couple candid" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../assets/gallery/wedding/15.webp" alt="Wedding moment - Wedding decor" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html">
+                        <img src="../assets/logo/logo.webp" alt="Shubham Digital Studio Logo" class="footer-logo">
+                    </a>
+                    <p>Capturing moments that last forever</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/shubhamdigitalmarehra/" target="_blank" class="insta-follow-btn">
+                            <i class="fab fa-instagram"></i> Follow Us
+                        </a>
+                        <a href="https://www.youtube.com/@ShubhamDigitalMarehra" target="_blank" class="youtube-follow-btn">
+                            <i class="fab fa-youtube"></i> Subscribe Now
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="../index.html#pre-wedding-video">Pre-Wedding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../gallery.html#wedding-btn">Wedding Photography</a></li>
+                        <li><a href="../index.html#pre-wedding-video">Event Videography</a></li>
+                        <li><a href="../gallery.html#all-btn">Portrait Sessions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and photography tips.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Shubham Digital Studio. All rights reserved.</p>
+                </div>
+                <div class="developer-credits">
+                    <p><a href="https://instagram.com/its.mrgagan" target="_blank">Made with <i class="fas fa-heart glowing-heart"></i> by Gagan</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <div id="floating-contact-wrapper">
+        <button class="floating-btn" onclick="toggleFloatingMenu(event)">
+            <i class="fas fa-phone"></i>
+        </button>
+        <div class="floating-content">
+            <a href="tel:+918077001632" class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>Call Us</span>
+            </a>
+            <a href="https://wa.me/918077001632?text=Hello, I'm interested in your services" target="_blank" class="contact-item whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://www.youtube.com/@ShubhamDigitalMarehra" target="_blank" class="contact-item youtube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="https://www.instagram.com/its.mrgagan" target="_blank" class="contact-item instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/overlay.js"></script>
+    <script src="../js/imagePopup.js"></script>
+
+    <script>
+        function toggleFloatingMenu(event) {
+            event.preventDefault();
+            const content = document.querySelector('.floating-content');
+            content.classList.toggle('active');
+            const btn = document.querySelector('.floating-btn');
+            btn.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
