@@ -2,7 +2,7 @@
 
 Welcome to the official repository of Shubham Digital Studio website. This repository contains the source code for our professional photography and videography studio website, located in Marehra, Etah, U.P.
 
-![Website Preview](assets/images/preview.png)
+![Website Preview](assets/preview.png)
 *First look at our professional photography studio website*
 
 <div align="center">
