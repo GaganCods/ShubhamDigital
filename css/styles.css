@@ -399,7 +399,7 @@ section::before {
 .hero {
     height: 100vh;
     background: linear-gradient(var(--gradient-2)),
-                url('../assets/hero-bg.jpg') center/cover;
+                url('../assets/hero.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Changed from center to flex-start */
